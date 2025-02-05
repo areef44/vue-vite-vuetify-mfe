@@ -1,8 +1,8 @@
 <template>
-  <div class="label-remote">
+  <div>
     <h1>This is the remote App!</h1>
     <div class="flex-align mt">
-      <div class="label-remote">
+      <div>
         <h1>Halo Remote 2</h1>
       </div>
       <v-card>

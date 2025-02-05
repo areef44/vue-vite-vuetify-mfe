@@ -1,6 +1,5 @@
 <template>
-  <div class="main">
-    <div class="root-label">Root App</div>
+  <div>
     <div class="content">
       <div class="routes">
         <RouterLink class="mr" :to="{name: 'Home'}">Root App</RouterLink>
@@ -8,23 +7,11 @@
         <RouterLink  :to="{name: 'RemoteTwo'}">Remote Two</RouterLink>
       </div>
       <RouterView/>
-      <div class="mt text-center" v-show="$route.name === 'Remote'">
-        <div class="root-label mb">State changing on Root</div>
-        <h2 class="mb">{{ store.userName }}</h2>
-        <button class="btn" @click="() => {
-          store.setUserName('Arif')
-        }">Click</button>
-      </div>
-      <div class="mt text-center" v-show="$route.name === 'RemoteTwo'">
-      </div>
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
-import { useExampleStore } from './stores/exampleStore'
 
-const store = useExampleStore()
 
 </script>
 
@@ -43,14 +30,6 @@ const store = useExampleStore()
 
 .mr {
   margin-right: 40px;
-}
-
-.main {
-  background-color: rgb(255, 208, 215);
-  min-height: 100vh;
-  width: 100%;
-  text-align: left;
-  padding: 25px;
 }
 
 .content {
